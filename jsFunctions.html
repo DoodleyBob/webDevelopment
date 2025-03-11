@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using JS functions in HTML</title>
+</head>
+<body>
+    <p id="p">
+        Change Me!
+    </p>
+
+    <button onclick="turnRed()">Click Me!</button>
+
+    <p id="p2">Change me, but with addEventListener</p>
+
+    <h4 id="colorText">Use the buttons to change the color of this text!</h4>
+
+    <button style="color: red" onclick="changeColor('red')">red</button>
+    <button style="color: blue" onclick="changeColor('blue')">blue</button>
+
+    <script>
+        function turnRed() {
+            var p = document.getElementById("p");
+            p.style.color = "red";
+        }
+
+        // Create a new button
+        var button = document.createElement("button");
+        button.innerHTML = "Click Me Too!";
+
+        // Add an eventListener
+        // See what happens if you change this function to turnRed
+
+        button.addEventListener("click", function() {
+            var p = document.getElementById("p2");
+            p.style.color = "blue";
+        });
+
+        document.body.appendChild(button);
+
+        function changeColor(colors) {
+            document.getElementById('colorText').style.color = colors;
+        }
+    </script>
+</body>
+</html>

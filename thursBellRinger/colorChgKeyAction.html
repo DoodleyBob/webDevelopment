@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change on Key Action</title>
+</head>
+<body>
+    <script>
+        // Create dynamic changing background color to the page
+        document.addEventListener("keydown", function(e){
+            if(e.key == 'r') {
+                document.body.style.backgroundColor = 'red';
+            } else if(e.key == 'b') {
+                document.body.style.backgroundColor = 'blue';
+            } else if(e.key == 'g') {
+                document.body.style.backgroundColor = 'green';
+            }
+        });
+        document.addEventListener('keyup', function(e){
+            document.body.style.backgroundColor = 'white';
+        });
+    </script>
+</body>
+</html>

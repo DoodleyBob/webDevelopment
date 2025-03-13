@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event Example</title>
+</head>
+<body>
+    <h2>Press any key!</h2>
+    <p>Key Pressed: <span id="keyPressed"></span></p>
+    <p>Key Code: <span id="keyCode"></span></p>
+
+    <script>
+        // Capture a listener for keyup and for keydown
+
+        document.addEventListener("keydown", function(e){
+            document.getElementById('keyPressed').textContent = 'Key: ' + e.key;
+            document.getElementById('keyCode').textContent = 'Code: ' + e.key;
+        });
+
+      document.addEventListener("keyup", function(e){
+        document.getElementById('keyPressed').textContent = '';
+        document.getElementById('keyCode').textContent = '';
+      })
+    </script>
+</body>
+</html>

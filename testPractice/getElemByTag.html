@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS getElementsByTagName</title>
+</head>
+<body>
+    <p>Lebron</p>
+    <p>Lebron</p>
+    <p>Lebron</p>
+
+    <script>
+        var p = document.getElementsByTagName("p");
+        console.log(p);
+        
+        p[0].style.backgroundColor = "brown"; 
+        p[1].style.backgroundColor = "yellow"; p[1].style
+        p[2].style.backgroundColor = "purple"; p[2].style.fontSize = "23px"
+
+        for(var paras of p) {
+            paras.style.color = "goldenrod";
+            paras.style.fontWeight = "bold";
+        }
+        
+
+    </script>
+</body>
+</html>

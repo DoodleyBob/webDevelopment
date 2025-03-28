@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS getElementById: </title>
+</head>
+<body>
+    <p id="example">Hello World!</p>
+    <p id="two">This is my second paragraph!</p>
+    <script>
+        var p = document.getElementById("example");
+        p.innerHTML = "I changed the text and the color!";
+        p.style.color = "turquoise"
+
+        document.getElementById("two").innerHTML = "This is the changed text of the second paragraph!";
+        document.getElementById("two").style.backgroundColor = "#FF007F";
+    </script>
+</body>
+</html>

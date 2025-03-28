@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS this Keyword onclick and eventListener</title>
+</head>
+<body>
+    <button id="example">Change My Color</button>
+
+    <p>One</p>
+    <p>Two</p>
+    <p>Three</p>
+    <p>Four</p>
+    <p>Five</p>
+
+
+    <script>
+        var btn = document.getElementById('example');
+        btn.addEventListener("click", function() {
+            this.style.backgroundColor = "goldenrod";
+        });
+
+
+        var paras = document.getElementsByTagName('p');
+        paras[3].addEventListener("click", function() {
+            this.style.color = "green";
+        });
+    </script>
+    
+</body>
+</html>
